@@ -1,0 +1,629 @@
+
+
+@font-face {
+	font-family: 'Old London';
+	src:url('/OldLondon.ttf');
+	src:url('/OldLondon.ttf') format('embedded-opentype'), 
+		  url('/OldLondon.ttf.ttf') format('truetype'),
+}
+
+$sold: red;
+
+
+
+
+body {
+    background-color: fff ;
+    height: 500px;
+    margin: 0;
+}
+
+
+
+
+
+* {box-sizing: border-box;}
+.wrapper {
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.wrapper > div {
+  /*border: 2px solid rgb(233,171,88);
+  border-radius: 5px;
+     background-color: rgba(233,171,88,.5);  */
+  padding: 0em;
+  color: black;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;   
+}
+.two { 
+  grid-column: 5 / 8;
+  grid-row: 1 / 20;
+}
+.three {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+
+.four,
+.five,
+.six,
+.seven,
+.eight{
+  grid-column: 2 / 5;
+  grid-row: 3 / 7;
+
+
+}
+
+
+.nine{
+  grid-column: 1 / 2;
+  grid-row: 5 / 6; 
+  align-self: end;
+  position: fixed;
+  bottom: 0;
+  
+}
+
+
+.info{
+  padding-left: 50px;
+  padding-bottom: 50px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'helvetica';
+	font-weight: 100;
+    font-style: italic; 
+}
+
+
+
+
+
+.logo{
+  background-color: ;
+  position: fixed;
+  top: 0;
+  padding: 15px;
+ 
+}
+
+
+.nav{
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'helvetica';
+	font-weight: 100;
+    
+    text-align: right;
+    color: black;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
+   
+}
+
+ol {
+  list-style-type: upper-roman;
+    line-height: 200%;
+}
+
+
+
+
+.section{
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-family: 'helvetica';
+	font-weight: 100;
+    font-size: .7em;
+    text-align: left;
+    color: black;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.7;
+    position: fixed;
+    width: 50%;
+}
+
+
+.content{
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-family: 'helvetica';
+	font-weight: 100;
+    font-size: .7em;
+    text-align: left;
+    color: black;
+    float: right;
+    padding-top:;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: ;
+
+}
+
+p{
+    color: red;
+    font-style: italic;
+    text-align: right;
+    
+}
+
+
+.right{
+    float:right;
+}
+
+.left{
+    float:left;
+}
+
+
+
+
+
+.button {
+  background-color: transparent;
+  border: transparent;
+  color: black;
+  text-decoration: none;
+  outline:none;
+  
+}
+
+
+
+
+
+
+#imgsize{
+    max-width: 300px;
+    
+}
+
+
+#bw img {
+     border-radius: 0%;
+    
+    filter: grayscale(100%);
+    -webkit-filter: greyscale(100%);
+   
+    
+    transition: filter .8s ease-in-out;
+    -webkit-transition: -webkit-filter 6ms ease;
+}
+
+
+#bw img:hover{
+     -webkit-transition: all .5s ease-in-out;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
+
+
+
+
+
+
+
+/* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: dimgrey;
+}
+
+/* mouse over link */
+a:hover {
+    color: yellow;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    
+    
+}
+a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+
+/********      Button area     ********/
+
+.about
+{
+  display: none;
+}
+
+.custom {
+    display: none;
+}
+
+.stockists {
+    display: none;
+}
+
+.shop {
+    display: none;
+}
+
+
+.contact {
+    display: none;
+}
+
+#lamp {
+position: absolute; 
+top: 30px;
+left: 65px;>
+}
+
+
+/******        LOGO FLIKER text     *******/
+
+
+
+h1 {
+    color:rgb(0, 0, 0);
+    font-family: 'Old London', sans-serif;
+    font-size:30px;
+    letter-spacing:5px;
+    animation: text-flicker 3s linear infinite;            
+    text-transform: lowercase;
+    position: fixed;
+    padding: 25px;
+
+}
+
+
+#offset {
+    animation: letter-flicker 2s linear infinite;
+}
+
+
+@keyframes text-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, .1);
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px rgba(0, 0, 0, .1);
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  100% {`
+    opacity:.9;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, .1)
+  }
+}
+
+
+
+@keyframes letter-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  2% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  4% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  
+  
+  19% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  23% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  87% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+}
+
+
+
+
+
+   /********      for small screen 500px      ********/
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  
+    body {
+      
+   
+    }
+    
+    
+    
+    
+
+
+.one {
+    grid-column: 1 / 3;
+    grid-row: 1;   
+}
+.two { 
+  grid-column: 3 / 8;
+  grid-row: 7 / 20;
+    z-index: 99;
+    background: white;
+}
+.three {
+  grid-column: 5 / 5;
+  grid-row: 1 / 3;
+    
+}
+
+
+.four,
+.five,
+.six,
+.seven,
+.eight{
+  grid-column: 3 / 5;
+  grid-row: 2 / 7;
+text-align: right;
+z-index: 0;
+}
+
+
+.nine{
+  grid-column: 1 / 2;
+  grid-row: 5 / 6; 
+  align-self: end;
+  position: fixed;
+  bottom: 0;
+  
+}
+
+
+ 
+
+    /*
+img{
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform: rotate(-90deg);   
+    max-width: 1000px;
+        }
+ */
+    
+    /* .wrapper {  display: none; } */
+
+    .nine { display: none; }
+    
+
+    .section{
+        width: 60%;
+        
+}
+    
+    
+/******        LOGO FLIKER text     *******/
+
+h1 {
+    transform: rotate(-90deg);
+    font-family: 'Old London', sans-serif;
+    font-size:60px;
+    letter-spacing:10px;
+    animation: text-flicker 3s linear infinite;            
+    text-transform: lowercase;
+    top:150px;
+    left:-25px;
+}
+
+#lamp {
+    top: 35px;
+    left: 106px;>
+}
+    
+    
+#offset {
+    animation: letter-flicker 3s linear infinite;
+}
+
+
+    
+@keyframes text-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, .1);
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px rgba(0, 0, 0, .1);
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1)
+  }
+  100% {`
+    opacity:.9;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, .1)
+  }
+}
+
+
+
+@keyframes letter-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  2% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  4% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  
+  
+  19% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  21% {
+    opacity:0.1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  23% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  
+  80% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  83% {
+    opacity:0.4;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+  87% {
+    opacity:1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+  }
+}
+
+
+
+
+
